@@ -184,8 +184,8 @@ pre_install(){
     fi
     # Set ShadowsocksR config password
     echo "Please input password for ShadowsocksR:"
-    read -p "(Default password: teddysun.com):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
+    read -p "(Default password: vps-test):" shadowsockspwd
+    [ -z "${shadowsockspwd}" ] && shadowsockspwd="vps-test"
     echo
     echo "---------------------------"
     echo "password = ${shadowsockspwd}"
