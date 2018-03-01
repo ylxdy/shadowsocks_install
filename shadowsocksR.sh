@@ -14,7 +14,7 @@ echo
 echo "#############################################################"
 echo "# One click Install ShadowsocksR Server                     #"
 echo "# Intro: https://shadowsocks.be/9.html                      #"
-echo "# Author: Teddysun <i@teddysun.com>  haha                       #"
+echo "# Author: Teddysun <i@teddysun.com>                         #"
 echo "# Github: https://github.com/shadowsocksr/shadowsocksr      #"
 echo "#############################################################"
 echo
@@ -222,8 +222,8 @@ pre_install(){
         hint="${ciphers[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "Which cipher you'd select(Default: ${ciphers[12]}):" pick
-    [ -z "$pick" ] && pick=12
+    read -p "Which cipher you'd select(Default: ${ciphers[11]}):" pick
+    [ -z "$pick" ] && pick=11
     expr ${pick} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
@@ -250,8 +250,8 @@ pre_install(){
         hint="${protocols[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "Which protocol you'd select(Default: ${protocols[5]}):" protocol
-    [ -z "$protocol" ] && protocol=5
+    read -p "Which protocol you'd select(Default: ${protocols[4]}):" protocol
+    [ -z "$protocol" ] && protocol=4
     expr ${protocol} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
@@ -278,8 +278,8 @@ pre_install(){
         hint="${obfs[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "Which obfs you'd select(Default: ${obfs[7]}):" r_obfs
-    [ -z "$r_obfs" ] && r_obfs=7
+    read -p "Which obfs you'd select(Default: ${obfs[6]}):" r_obfs
+    [ -z "$r_obfs" ] && r_obfs=6
     expr ${r_obfs} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
