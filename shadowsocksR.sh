@@ -195,8 +195,8 @@ pre_install(){
     while true
     do
     echo -e "Please input port for ShadowsocksR [1-65535]:"
-    read -p "(Default port: 8989):" shadowsocksport
-    [ -z "${shadowsocksport}" ] && shadowsocksport="8989"
+    read -p "(Default port: 8999):" shadowsocksport
+    [ -z "${shadowsocksport}" ] && shadowsocksport="8999"
     expr ${shadowsocksport} + 1 &>/dev/null
     if [ $? -eq 0 ]; then
         if [ ${shadowsocksport} -ge 1 ] && [ ${shadowsocksport} -le 65535 ]; then
@@ -223,7 +223,7 @@ pre_install(){
         echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which cipher you'd select(Default: ${ciphers[11]}):" pick
-    [ -z "$pick" ] && pick=11
+    [ -z "$pick" ] && pick=12
     expr ${pick} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
@@ -251,7 +251,7 @@ pre_install(){
         echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which protocol you'd select(Default: ${protocols[4]}):" protocol
-    [ -z "$protocol" ] && protocol=4
+    [ -z "$protocol" ] && protocol=5
     expr ${protocol} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
@@ -279,7 +279,7 @@ pre_install(){
         echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which obfs you'd select(Default: ${obfs[6]}):" r_obfs
-    [ -z "$r_obfs" ] && r_obfs=6
+    [ -z "$r_obfs" ] && r_obfs=7
     expr ${r_obfs} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
