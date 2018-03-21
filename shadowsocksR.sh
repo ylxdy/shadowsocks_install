@@ -389,7 +389,7 @@ config_shadowsocks(){
     "timeout":120,
     "method":"${shadowsockscipher}",
     "protocol":"${shadowsockprotocol}",
-    "protocol_param":"",
+    "protocol_param":"cloudflare.com",
     "obfs":"${shadowsockobfs}",
     "obfs_param":"",
     "redirect":"",
