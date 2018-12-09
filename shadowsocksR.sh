@@ -392,7 +392,7 @@ config_shadowsocks(){
     "protocol_param":"",
     "obfs":"${shadowsockobfs}",
     "obfs_param":"cloudflare.com",
-    "redirect":"",
+    "redirect":"bing.com",
     "dns_ipv6":false,
     "fast_open":false,
     "workers":1
